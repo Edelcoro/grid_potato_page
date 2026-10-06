@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Potatoes grid</title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://googleapis.com" rel="stylesheet">
 <style>
     @font-face {
         font-family: Georgia;
@@ -13,8 +13,8 @@
         background: whitesmoke;
     } 
     #page {
-        width: 928px;
-        height: 1224px;
+        width: 1300px;
+        height: auto;
         background: white;
         margin: 0 auto;
         padding: 48px;
@@ -34,21 +34,21 @@
         font: 14pt/1.4em Georgia, serif;
         margin-bottom: 24px;
     } 
-    /* Grid container for potato photos */
     .photo-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template: repeat(2, 384px) / repeat(3, 384px);
         gap: 16px;
         margin: 24px 0;
     }
-    /* Sizing photos to a common width */
     .photo-grid img {
         width: 384px;
-        max-width: 100%;
-        height: auto;
+        height: 100%;
         border: 1px solid dimgray;
         box-shadow: 2px 3px 6px darkgray;
         object-fit: cover;
+    }
+    .photo-grid img:first-child {
+        grid-area: 1 / 1 / 3 / 2;
     }
 </style>
 </head>
@@ -57,7 +57,6 @@
 <div id="page">
 <h1>Grid with Potatoes</h1>
 
-<!-- Photo Grid section using the specified repository assets -->
 <div class="photo-grid">
     <img src="photo-1518977676601-b53f82aba655.avif">
     <img src="photo-1603048719539-9ecb4aa395e3.avif">
@@ -65,6 +64,7 @@
     <img src="photo-1617130094141-532436117aa1.avif">
     <img src="photo-1675501344642-92d35d90fe51.avif">
     <img src="photo-1698505949250-51f8b2c9c8c6.avif">
+</div>
 </div>
 </body>
 </html>
