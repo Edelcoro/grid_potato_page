@@ -34,22 +34,39 @@
         font: 14pt/1.4em Georgia, serif;
         margin-bottom: 24px;
     } 
-    .photo-grid {
-        display: grid;
-        grid-template: repeat(2, 384px) / repeat(3, 384px);
-        gap: 16px;
-        margin: 24px 0;
-    }
-    .photo-grid img {
-        width: 384px;
-        height: 100%;
-        border: 1px solid dimgray;
-        box-shadow: 2px 3px 6px darkgray;
-        object-fit: cover;
-    }
-    .photo-grid img:first-child {
-        grid-area: 1 / 1 / 3 / 2;
-    }
+.photo-grid {
+    display: grid;
+    grid-template: repeat(2, 384px) / repeat(3, 384px);
+    gap: 16px;
+    margin: 24px 0;
+}
+.photo-grid img {
+    width: 384px;
+    height: 100%;
+    border: 1px solid dimgray;
+    box-shadow: 2px 3px 6px darkgray;
+    object-fit: cover;
+}
+/* Set the other containers to auto layout */
+.div1 {
+    grid-area: auto;
+}
+.div2 {
+    grid-area: auto;
+}
+/* The third photo is portrait, so it spans 2 rows */
+.div3 {
+    grid-area: 1 / 3 / 3 / 4; /* Starts row 1, col 3; Ends row 3, col 4 */
+}
+.div4 {
+    grid-area: auto;
+}
+.div5 {
+    grid-area: auto;
+}
+.div6 {
+    grid-area: auto;
+}
 </style>
 </head>
 
@@ -58,12 +75,12 @@
 <h1>Grid with Potatoes</h1>
 
 <div class="photo-grid">
-    <img src="photo-1518977676601-b53f82aba655.avif">
-    <img src="photo-1603048719539-9ecb4aa395e3.avif">
-    <img src="premium_photo-1724256031338-b5bfba816cfd.avif">
-    <img src="photo-1617130094141-532436117aa1.avif">
-    <img src="photo-1675501344642-92d35d90fe51.avif">
-    <img src="photo-1698505949250-51f8b2c9c8c6.avif">
+    <div class="div1"><img src="photo-1518977676601-b53f82aba655.avif"></div>
+    <div class="div2"><img src="photo-1603048719539-9ecb4aa395e3.avif"></div>
+    <div class="div3"><img src="premium_photo-1724256031338-b5bfba816cfd.avif"></div>
+    <div class="div4"><img src="photo-1617130094141-532436117aa1.avif"></div>
+    <div class="div5"><img src="photo-1675501344642-92d35d90fe51.avif"></div>
+    <div class="div6"><img src="photo-1698505949250-51f8b2c9c8c6.avif"></div>
 </div>
 </div>
 </body>
